@@ -1,0 +1,292 @@
+    @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+    .header
+    {
+        display: flex; 
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+        border-bottom: 0.25px solid #6e6e6e;
+        padding-bottom: 10px;
+
+    }
+    .con2
+    {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        
+    } 
+    /* .dot
+    {
+        width: 25px;
+        height: 25px;
+        background-color: rgb(53, 117, 227);
+        border-radius: 50%;
+        
+    } */
+    .title
+    {
+        font-size: 20px;
+        font-family: roboto;
+        color: black;
+        font-weight: bold;
+    }
+    .t
+    {
+        font-size: 20px;
+        text-decoration: none;
+        color:black
+    }
+    .icon
+    {
+        font-size: 20px;
+        color:  rgb(53, 117, 227);
+        text-shadow: -4px -4px rgb(170, 193, 231);
+        margin-right: 8px;
+    }
+    .b
+    {
+        border: none;
+        cursor: pointer;
+        margin: 10px;
+        
+    }
+    .signup
+    {
+        background-color: rgb(53, 117, 227);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 5px;
+    }
+    .login
+    {
+        background-color: white;
+        border: 0.5px solid black;
+        padding: 8px 20px;
+        border-radius: 5px;
+    }
+    .innerText
+    {
+        color: rgb(53, 117, 227);
+        background-color: white;
+    }
+    .para
+    {
+        font-size: 50px;
+        font-weight: bold;
+        font-family: roboto;
+        margin-bottom: 0px;
+    }
+    .info
+    {
+        color: rgb(133, 133, 133);
+        font-size: 17px;
+        font-family: roboto;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+    .searching input ,.location input
+    {
+       width: 450px;
+       font-size: 17px;
+       padding: 10px;
+       /* border: solid rgb(198, 198, 198); */
+       border: none;
+
+    }
+    .jobbtn
+    {
+        background-color: rgb(53, 117, 227);
+        color: white;
+        padding: 10px;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .logo
+    {
+        display: flex;
+        align-items: center;
+    }
+    .searchingContainer
+    {
+        display: flex;
+        
+    }
+    .searching,.location
+    {
+        border: 0.25px solid rgb(198, 198, 198);
+        border-right: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 20px;
+    }
+    .con3
+    {
+        padding-left:60px;
+    }
+    .icons
+    {
+        color: rgb(145, 143, 143);
+        font-size: 17px;
+    }
+    input:focus
+    {
+        border: none;
+        outline: none;
+    }
+    .main-body-container
+    {
+        /* background-color: red; */
+        width: 100%;
+        display: flex;
+        margin-top: 80px;
+    }
+    .mainfilter
+    {
+        max-width: 380px;
+        /* background-color: rgb(165, 254, 10); */
+        padding-left: 20px ;
+        margin-left: 60px;
+        padding-right:20px ;
+        border: 0.1px solid #dcdcdc;
+        box-shadow: 0.1px 0.1px 2px #dcdcdc;
+
+    }
+    .jobs-container
+    {
+      /* background-color: aqua; */
+      margin-left: 20px;
+      max-width: 600px;
+    }
+    .dropdown
+    {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .filters-radio
+    {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+    }
+    .checkbox-group {
+        display:flex;
+      }
+      
+      .checkbox-button {
+        display: none;
+      }
+      
+      .checkbox-button + label {
+        display: inline-block;
+        padding: 8px 16px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        cursor: pointer;
+      }
+      
+      .checkbox-button:checked + label {
+        background-color:rgb(183, 200, 229);
+        color:rgb(53, 117, 227);
+        border:1px solid rgb(53, 117, 227);
+      }
+      #cars
+      {
+        /* padding: 5px; */
+        border: none;
+        font-size: 16px;
+      }
+      .icondrop
+      {
+        display: flex;
+        align-items: center;
+        border: 0.1px solid #dcdcdc;
+        box-shadow: 0.1px 0.1px 2px #dcdcdc;
+        margin: 10px 0px 10px 20px;
+        padding: 0px 30px 0px 10px;
+
+      }
+      /* .drop
+      {
+          color: rgb(145, 143, 143);
+          
+      } */
+      img
+      {
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+      }
+      .software
+      {
+        display: flex;
+        margin-left: 10px;
+        border: 0.1px solid #dcdcdc;
+        box-shadow: 0.1px 0.1px 2px #dcdcdc;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .information
+      {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+      }
+      .address
+      {
+        display: flex;
+        align-items: center;
+      }
+      .company,.role,.matter
+      {
+        margin: 0px;
+      }
+      .circ
+      {
+        font-size: 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .awesome
+      {
+        margin-right: 10px;
+      }
+      .company
+      {
+        margin-bottom: 10px;
+      }
+      .email
+      {
+        display: flex;
+        align-items: center;
+      }
+      .final
+      {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        border: 0.1px solid #dcdcdc;
+        box-shadow: 0.1px 0.1px 2px #dcdcdc;
+        padding: 10px 20px 10px 20px;
+        margin: 10px 10px 10px 10px;
+        
+      }
+      .susbtn
+      {
+        border: none;
+        background-color: rgb(53, 117, 227);
+        color: white;
+        margin: 10px 0px;
+        padding: 10px 0px;
+        font-size: 16px;
+      }
+      .final input
+      {
+        padding: 10px;
+        border: 0.2px solid #b5b5b5;
+      }
