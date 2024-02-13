@@ -4,119 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="flexbox.css">
 
 </head>
-<style>
-    @import url(https://fonts.googleapis.com/css?family=Roboto:300);
-
-    .header
-    {
-        display: flex; 
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 2opx;
-
-    }
-    .con2
-    {
-        display: flex;
-        gap: 50px;
-        align-items: center;
-        
-    } 
-    /* .dot
-    {
-        width: 25px;
-        height: 25px;
-        background-color: rgb(53, 117, 227);
-        border-radius: 50%;
-        
-    } */
-    .title
-    {
-        font-size: 50px;
-        font-family: roboto;
-        color: rgb(53, 117, 227);
-        font-weight: bold;
-    }
-    .t
-    {
-        font-size: 20px;
-    }
-    .b
-    {
-        border: none;
-        cursor: pointer;
-        margin: 10px;
-        
-    }
-    .signup
-    {
-        background-color: rgb(53, 117, 227);
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    .login
-    {
-        background-color: white;
-    }
-    .innerText
-    {
-        color: rgb(53, 117, 227);
-        background-color: white;
-    }
-    .para
-    {
-        font-size: 70px;
-        font-weight: 1000;
-        font-family: roboto;
-        padding-left: 60px ;
-        margin-bottom: 0px;
-    }
-    .info
-    {
-        color: rgb(133, 133, 133);
-        padding-left: 60px;
-        font-size: 20px;
-        font-family: roboto;
-        font-weight: bold;
-        margin-top: 15px;
-        margin-bottom: 70px;
-    }
-    input
-    {
-       width: 450px;
-       font-size: 20px;
-       padding: 10px;
-       border-radius: 30px;
-       border: solid rgb(198, 198, 198);
-    }
-    .place
-    {
-        margin-left: 60px;
-    }
-    .jobbtn
-    {
-        background-color: rgb(53, 117, 227);
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        font-size: 20px;
-        margin-left: 10px;
-        cursor: pointer;
-    }
-</style>
 <body>
     <div class="header">
-        <div class="title">Namless</div>
+
+        <div class="logo">
+            <i class="fa-solid fa-circle icon"></i>
+            <div class="title">namless</div>
+        </div>
+        
 
         <div class="con2">
-            <div class="t2 t">Start a search</div>
-            <div class="t3 t">Jobs list</div>
-            <div class="t4 t">Salary estimate</div>
-            <div class="t5 t">Pricing</div>
+            <a href="" class="t2 t">Start a search</a>
+            <a href="" class="t3 t">Jobs list</a>
+            <a href="" class="t4 t">Salary estimate</a>
+            <a href="" class="t5 t">Pricing</a>
         </div>
         
         <div class="btn">
@@ -125,11 +30,287 @@
         </div>
     </div>
 
-    <p class="para">Find your <mark class="innerText"> new job</mark> today</p>
-    <p class="info">Thousands of jobs in the computer engineering and technology sectors are waiting for you.</p>
-    <input type="search" class="place"placeholder="What position are you looking for ?">
-    <input type="text" placeholder="Location">
-    <button class="jobbtn">Search job</button>
+    <div class="con3">
 
-</body>
+        <p class="para">Find your <mark class="innerText"> new job</mark> today</p>
+        <p class="info">Thousands of jobs in the computer engineering and technology sectors are waiting for you.</p>
+
+        <div class="searchingContainer">
+            <div class="searching">
+                <i class="fa-solid fa-magnifying-glass icons"></i>
+                <input type="search" class="place" placeholder="What position are you looking for ?">
+            </div>
+            <div class="location">
+                <i class="fa-solid fa-location-dot icons"></i>
+                <input type="text" placeholder="Location">
+            </div>
+            
+            <button class="jobbtn">Search job</button>
+        </div>
+
+    </div>
+    <div class="main-body-container"> 
+        <div class="mainfilter">
+        <div class="filters-container">
+          <h2 class="filters-container-heading">Filters</h2>
+          <div>
+            <h3 class="filters-container-location-heading">Location</h3>
+            <div class="filters-radio">
+              <input type="radio" id="nearme" name="option1"/>
+              <label for="nearme">Near me</label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="remote" name="option1" checked/>
+              <label for="remote">Remote job</label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="exact" name="option1"/>
+              <label for="exact">Exact location</label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="within15" name="option1"/>
+              <label for="within15">Within 15km</label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="within30" name="option1"/>
+              <label for="within30">Within 30km</label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="within45" name="option1" />
+              <label for="within45">Within 45km</label>
+            </div>
+          </div>
+          <div class="salary-main-conatiner">
+            <h3 class="filters-container-location-heading">Salary</h3>
+            <div class="checkbox-group">
+                <input type="radio" id="option1" name="options" class="checkbox-button">
+                <label for="option1">Hourly</label>
+                
+                <input type="radio" id="option2" name="options" class="checkbox-button">
+                <label for="option2">Monthly</label>
+                
+                <input type="radio" id="option3" name="options" class="checkbox-button" checked>
+                <label for="option3" >Yearly</label>
+            </div>
+              
+            <div class="filters-radio">
+              <input type="radio" id="any" name="option2" checked/>
+              <label for="any">Any</label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="30" name="option2" />
+              <label for="30"> >30000k</label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="50" name="option2"/>
+              <label for="50">>50000k</label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="80" name="option2"/>
+              <label for="80">
+                 >80000k</label>
+            </div>
+            <div class="filters-radio">
+                <input type="radio" id="100" name="option2"/>
+                <label for="100">
+                   >100000k
+                </label>
+              </div>
+          </div>
+          <div class="salary-main-conatiner">
+            <h3 class="filters-container-location-heading">Date of posting</h3>
+            <div class="filters-radio">
+              <input type="radio" id="all" name="option3" checked />
+              <label for="all">All time </label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="24" name="option3"/>
+              <label for="24">Last 24 days</label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="10" name="option3"/>
+              <label for="10">Last 10 days</label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="300" name="option3"/>
+              <label for="300"> Last 30 days</label>
+            </div>
+          </div>
+          <div class="salary-main-conatiner">
+            <h3 class="filters-container-location-heading">Work experience</h3>
+            <div class="filters-radio">
+              <input type="radio" id="exp" name="option4" checked />
+              <label for="exp">Any experience </label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="intern" name="option4"/>
+              <label for="intern">Internship</label>
+            </div>
+            <div class="filters-radio">
+              <input type="radio" id="full" name="option4"/>
+              <label for="full">Fulltime </label>
+            </div>
+          </div>
+          <div class="salary-main-conatiner">
+            <h3 class="filters-container-location-heading">Type of employment</h3>
+            <div class="filters-radio">
+              <input type="checkbox" id="exps" checked />
+              <label for="exps">Full time</label>
+            </div>
+            <div class="filters-radio">
+              <input type="checkbox" id="interns"/>
+              <label for="interns">Temporary</label>
+            </div>
+            <div class="filters-radio">
+              <input type="checkbox" id="fulls"/>
+              <label for="fulls">Part time </label>
+            </div>
+          </div>
+        </div>
+    </div>
+        <div class="jobs-container">
+            <div class="dropdown">
+                <h2 style="padding-left: 10px;">3177 Jobs</h2>
+                <div class="icondrop">
+                    <i class="fa-solid fa-arrow-down-wide-short drop" style="margin-right: 10px;"></i>
+                    <form >
+                        <label for="cars" style="margin-right: 15px; font-size: 16px;">Filter by</label>
+                        <select name="cars" id="cars">
+                          <option id="ff" value="volvo"></option>
+                          <option value="saab">UI/UX</option>
+                          <option value="opel">Developer</option>
+                          <option value="audi">Data Sciende</option>
+                        </select>
+                    </form>
+                </div>
+            </div>    
+                <div class="software">
+
+                    <div class="img">
+                        <img src="https://pbs.twimg.com/profile_images/1631708750925946880/VOo1Q4T7_400x400.jpg" alt="">
+                    </div>
+                    <div class="information">
+                        <p class="company">Linear Company</p>
+                        <h2 class="role">Software Engineer</h2>
+                        <div class="address">
+                            <i class="fa-solid fa-location-dot awesome" ></i>
+                            <p class="add">Brussels</p>
+                            <i class="fa-solid fa-circle circ" ></i>
+                            <i class="fa-regular fa-clock awesome"></i>
+                            <p class="add">Full time</p>
+                            <i class="fa-solid fa-circle circ"></i>
+                            <i class="fa-solid fa-dollar-sign awesome"></i>
+                            <p class="add">50-55k</p>
+                            <i class="fa-solid fa-circle circ"></i>
+                            <i class="fa-regular fa-calendar awesome"></i>
+                            <p class="add">29 min ago</p>
+                        </div>
+                        <p class="matter">
+                            Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
+                        </p>
+                    </div>
+                </div>
+                <div class="software">
+
+                    <div class="img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png?20200221181224" alt="">
+                    </div>
+                    <div class="information">
+                        <p class="company">Notion</p>
+                        <h2 class="role">Junior UI Designer</h2>
+                        <div class="address">
+                            <i class="fa-solid fa-location-dot awesome" ></i>
+                            <p class="add">Madrid</p>
+                            <i class="fa-solid fa-circle circ" ></i>
+                            <i class="fa-regular fa-clock awesome"></i>
+                            <p class="add">Full time</p>
+                            <i class="fa-solid fa-circle circ"></i>
+                            <i class="fa-solid fa-dollar-sign awesome"></i>
+                            <p class="add">50-55k</p>
+                            <i class="fa-solid fa-circle circ"></i>
+                            <i class="fa-regular fa-calendar awesome"></i>
+                            <p class="add">1 day ago</p>
+                        </div>
+                        <p class="matter">
+                            Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
+                        </p>
+                    </div>
+                </div>
+                <div class="software">
+
+                    <div class="img">
+                        <img class="mx-auto size-24 rounded-lg border lg:mx-0 lg:size-32" src="https://cdn-1.webcatalog.io/catalog/spline/spline-icon-filled-256.png?v=1675594530708" alt="Spline">                    </div>
+                    <div class="information">
+                        <p class="company">Spline Studio</p>
+                        <h2 class="role">Technical Support Engineer</h2>
+                        <div class="address">
+                            <i class="fa-solid fa-location-dot awesome" ></i>
+                            <p class="add">United States</p>
+                            <i class="fa-solid fa-circle circ" ></i>
+                            <i class="fa-regular fa-clock awesome"></i>
+                            <p class="add">Full time</p>
+                            <i class="fa-solid fa-circle circ"></i>
+                            <i class="fa-solid fa-dollar-sign awesome"></i>
+                            <p class="add">50-55k</p>
+                            <i class="fa-solid fa-circle circ"></i>
+                            <i class="fa-regular fa-calendar awesome"></i>
+                            <p class="add">1 day ago</p>
+                        </div>
+                        <p class="matter">
+                            Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="software">
+
+                    <div class="img">
+                        <img onerror="replaceWithDefaultImg(this, '/assets/logo-not-available-5cd20cb96c46e42dd72e8c8e9185801cace80f019155932b8287bbe8a7981d47.png');" class="js-product-img center-center detail-logo" alt="Raycast Reviews" title="Raycast Reviews" height="117" width="177" itemprop="image" src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_9a487b4a4763a4c7feece5bf8f45f962/raycast.png">                    </div>
+                    <div class="information">
+                        <p class="company">Raycast corp</p>
+                        <h2 class="role">Product Engineer</h2>
+                        <div class="address">
+                            <i class="fa-solid fa-location-dot awesome" ></i>
+                            <p class="add">London</p>
+                            <i class="fa-solid fa-circle circ" ></i>
+                            <i class="fa-regular fa-clock awesome"></i>
+                            <p class="add">Full time</p>
+                            <i class="fa-solid fa-circle circ"></i>
+                            <i class="fa-solid fa-dollar-sign awesome"></i>
+                            <p class="add">50-55k</p>
+                            <i class="fa-solid fa-circle circ"></i>
+                            <i class="fa-regular fa-calendar awesome"></i>
+                            <p class="add">1 day ago</p>
+                        </div>
+                        <p class="matter">
+                            Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
+                        </p>
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="updates-container">
+            <div class="final">
+                <div class="email">
+                    <i class="fa-solid fa-envelope" style="font-size: 22px; margin-right: 10px;"></i>                    
+                    <h2>Email me for jobs</h2>
+                </div>
+                <p>Ut esse eiusmod aute. Sit enim labore dolore. Aute ea fugiat commodo ea foes.</p>
+                <input type="email" name="" id="mail" placeholder="name@mail.com">
+                <button class="susbtn">Subcribe</button>
+            </div>
+            <div class="final" style="margin-top: 25px;">
+                <div class="email">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Cartoon_space_rocket.png" style="height: 40px; margin-right: 10px;"></img>                    
+                    <h2>Get noticed</h2>
+                </div>
+                <p>Ut esse eiusmod aute. Sit enim labore dolore. Aute ea fugiat commodo ea foes.</p>
+
+                <button class="susbtn">Upload Your resume</button>
+            </div>
+
+        </div>
+      </div>
+    </body>
 </html>
