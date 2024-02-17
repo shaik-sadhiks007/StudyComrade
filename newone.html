@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body 
+      {
+        font-family: 'Roboto', sans-serif;
+      }
+    .icon
+    {
+        color:  rgb(53, 117, 227);
+        text-shadow: -4px -4px rgb(170, 193, 231);
+    }
+    .btn-login,.btn-login:hover
+    {
+      background-color: white;
+      border: 0.5px solid black;
+      padding: 8px 20px;
+      border-radius: 5px;
+    }
+    .btn-signup,.btn-signup:hover
+    {
+      background-color: rgb(53, 117, 227);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 5px;
+    } 
+    .innerText
+    {
+        color: rgb(53, 117, 227);
+        background-color: white;
+    }
+    .jbn
+    {
+      background-color: rgb(53, 117, 227);
+    }
+    .shadow
+    {
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5)!important;
+    }
+    .btn-check:checked+label
+    {
+      background-color:rgb(183, 200, 229) !important;
+      color:rgb(53, 117, 227) !important;
+      border:1px solid rgb(53, 117, 227) !important;
+    }
+    .btn-group>.btn-group:not(:first-child)>.btn, .btn-group>.btn:nth-child(n+3), .btn-group>:not(.btn-check)+.btn 
+    {
+    border-radius: 0;
+    }
+    .btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn.dropdown-toggle-split:first-child, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) 
+    {
+    border-radius: 0;
+    }
+    .circ
+    {
+       font-size: 2px;
+    }
+    img
+      {
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md border-bottom border-secondary mt-2 pb-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fa-solid fa-circle icon"></i>
+          namless
+        </a>
+        <div class="collapse navbar-collapse" id="offcanvasNavbar">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item me-2">
+              <a class="nav-link " aria-current="page" href="#">Start a search</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link " href="#">Jobs list</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link " href="#">Salary estimate</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link " href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+        <div  class="d-flex">
+          <button class="btn btn-login border border-black me-2" type="submit">Login</button>
+          <button class="btn btn-signup" type="submit">Sign up</button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+        <h1 class="col-12 mt-5">Find your<mark class="innerText">new job</mark>today</h1>
+        <p class="text-secondary col-12">Thousands of jobs in the computer engineering and technology sectors are waiting for you.</p>
+        
+        <div class="col-lg-12 d-lg-flex">
+          <div class="col-lg-5 border border-secondary p-2">
+              <i class="fa-solid fa-magnifying-glass icons "></i>
+              <input type="search" class="col-11 border-0" style="outline: none;" placeholder="What position are you looking for ?">
+          </div>
+          <div class="col-lg-5 border border-secondary p-2">
+              <i class="fa-solid fa-location-dot icons"></i>
+              <input type="text" class="col-11 border-0" style="outline: none;" placeholder="Location">
+          </div>
+          
+          <button class="col-2 text-white border-0 jbn">Search job</button>
+        </div>
+      </div>
+    
+    <div class="container-lg mt-5">
+      <div class="row">
+        <div class="col-lg shadow">
+          <h3 class="mt-4">Filters</h3>
+          <h4>Location</h4>
+          <div class="form-check">
+            <input type="radio" id="nearme" name="option1"/>
+            <label for="nearme">Near me</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="remote" name="option1" checked/>
+            <label for="remote">Remote job</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="exact" name="option1"/>
+            <label for="exact">Exact location</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="within15" name="option1"/>
+            <label for="within15">Within 15km</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="within30" name="option1"/>
+            <label for="within30">Within 30km</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="within45" name="option1" />
+            <label for="within45">Within 45km</label>
+          </div>
+
+          <h4>Salary</h4>
+          <div class="btn-group" role="group" >
+            <input type="radio" id="option11" name="options" class="btn-check " > 
+            <label class="btn border border-end-0" for="option11">Hourly</label>
+  
+            <input type="radio" id="option22" name="options" class="btn-check">
+            <label class="btn border" for="option22">Monthly</label>
+  
+            <input type="radio" id="option33" name="options"  class="btn-check" checked>
+            <label class="btn border" for="option33" >Yearly</label>
+          </div>
+          <div class="form-check mt-2">
+            <input type="radio" id="any" name="option2" checked/>
+            <label for="any">Any</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="30" name="option2" />
+            <label for="30"> >30000k</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="50" name="option2"/>
+            <label for="50">>50000k</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="80" name="option2"/>
+            <label for="80">
+               >80000k</label>
+          </div>
+          <div class="form-check">
+              <input type="radio" id="100" name="option2"/>
+              <label for="100">
+                 >100000k
+              </label>
+          </div>
+
+          <h4 class="filters-container-location-heading">Date of posting</h4>
+          <div class="form-check">
+            <input type="radio" id="all" name="option3" checked />
+            <label for="all">All time </label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="24" name="option3"/>
+            <label for="24">Last 24 days</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="10" name="option3"/>
+            <label for="10">Last 10 days</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="300" name="option3"/>
+            <label for="300"> Last 30 days</label>
+          </div>
+
+          <h4 class="filters-container-location-heading">Work experience</h4>
+          <div class="form-check">
+            <input type="radio" id="exp" name="option4" checked />
+            <label for="exp">Any experience </label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="intern" name="option4"/>
+            <label for="intern">Internship</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="full" name="option4"/>
+            <label for="full">Fulltime </label>
+          </div>
+
+          <h4 class="filters-container-location-heading">Type of employment</h4>
+          <div class="form-check">
+            <input type="checkbox" id="exps" checked />
+            <label for="exps">Full time</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="interns"/>
+            <label for="interns">Temporary</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="fulls"/>
+            <label for="fulls">Part time </label>
+          </div>
+
+        </div>
+
+        <div class="col-lg ms-3 border border-danger">
+          <div class="row ">
+            <div class="d-flex justify-content-between">
+              <h2 class="">3177 Jobs</h2>
+                <div class="d-flex shadow align-items-center justify-content-end">
+                  <i class="fa-solid fa-arrow-down-wide-short drop" ></i>
+                  <div class="btn-group">
+                    <button class="btn ps-1 pe-5" href="#" >
+                      Filter by
+                    </button>
+                    <button class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+                      <span class="visually-hidden">a</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="" class="dropdown-menu"></a>UI/UX</li>
+                      <li><a href="" class="dropdown-menu"></a>Eng</li>
+                      <li><a href="" class="dropdown-menu"></a>Sf</li>
+                    </ul>
+                  </div>
+                </div>
+          </div>
+
+          <div class="container-fluid-lg d-flex flex-row shadow mt-3 pt-3">
+
+            <div class="img">
+                <img src="https://pbs.twimg.com/profile_images/1631708750925946880/VOo1Q4T7_400x400.jpg" alt="">
+            </div>
+            <div class="information ps-3">
+                <p class="company mb-0 pt-0">Linear Company</p>
+                <h5 class="role mt-1">Software Engineer</h5>
+                <div class="address d-flex flex-row align-items-center">
+                    <i class="fa-solid fa-location-dot me-2" ></i>
+                    <p class="add m-0">Brussels</p>
+                    <i class="fa-solid fa-circle circ mx-3" ></i>
+                    <i class="fa-regular fa-clock me-2"></i>
+                    <p class="add m-0">Full time</p>
+                    <i class="fa-solid fa-circle circ mx-3"></i>
+                    <i class="fa-solid fa-dollar-sign me-2"></i>
+                    <p class="add m-0">50-55k</p>
+                    <i class="fa-solid fa-circle circ mx-3"></i>
+                    <i class="fa-regular fa-calendar me-2"></i>
+                    <p class="add m-0">29 min ago</p>
+                </div>
+                <p class="matter mt-1">
+                    Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt.
+                </p>
+            </div>
+          </div>
+
+              </div>
+           
+              
+              
+            </div>
+            
+
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+
+    </div>
+
+      
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
